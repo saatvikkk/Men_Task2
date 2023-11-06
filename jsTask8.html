@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JavaScript Task 8</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+        <div id="mainClass">
+            <p style="font-size: 36px;font-weight: bold;color: blue;margin-left: 50px;">Registration Form</p>
+            <div class="row">
+                <div class="col" style="text-align: right;">
+                    <label for="fname">First Name</label>
+                </div>
+                <div class="col">
+                    <input type="text" id="fname" oninput="register()">
+                </div>
+                <div class="col">
+                    <p style= "color: red;" id="erfname">POOR</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col" style="text-align: right;">
+                    <label for="lname">Last Name</label><br>
+                </div>
+                <div class="col">
+                    <input type="text" id="lname" oninput="register()"><br>
+                </div>
+                <div class="col">
+                    <p style= "color: red;" id="erlname">POOR</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col" style="text-align: right;">
+                    <label for="email">Email</label><br>
+                </div>
+                <div class="col">
+                    <input type="email" id="email" oninput="register()"><br>
+                </div>
+                <div class="col">
+                    <p style= "color: red;" id="eremail">POOR</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col" style="text-align: right;">
+                    <label for="passwd">Password</label><br>
+                </div>
+                <div class="col">
+                    <input type="password" id="passwd" oninput="register()"><br>
+                </div>
+                <div class="col">
+                    <p style= "color: red;" id="erpass">POOR</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col" style="text-align: right;">
+                    <label for="repass">Re-enter Password</label><br>
+                </div>
+                <div class="col">
+                    <input type="password" id="repass" oninput="register()"><br>
+                </div>
+                <div class="col">
+                    <p style= "color: red;" id="errepass">POOR OR MISMATCH</p>
+                </div>
+            </div>
+            <div class="row" style="text-align: left;">
+                <div class="col-2 ms-4" style="text-align: right;">
+                    <label for="gender">Gender</label><br>
+                </div>
+                <div class="col ms-4">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="genM" value="male">
+                        <label class="form-check-label" for="gender">Male</label>
+                    </div>
+                    <br>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="genF" value="female">
+                        <label class="form-check-label" for="gender">Female</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col" style="text-align: right;">
+                    <label for="age">Age</label><br>
+                </div>
+                <div class="col">
+                    <input type="number" id="age" oninput="register()"><br>
+                </div>
+                <div class="col">
+                    <p style= "color: red;" id="erage">POOR</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col" style="text-align: right;">
+                    <label for="phone">Phone Number</label><br>
+                </div>
+                <div class="col">
+                    <input type="number" id="phone" oninput="register()"><br>
+                </div>
+                <div class="col">
+                    <p style= "color: red;" id="erphone">POOR</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col" style="text-align: right;padding-right: 30px;align-self: center;">
+                    <label for="repass">Address</label><br>
+                </div>
+                <div class="col">
+                    <textarea name="add" id="address" cols="65" rows="3" oninput="register()"></textarea><br>
+                </div>
+                <div class="col">
+                    <p style= "color: red;" id="eradd">POOR</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col" style="text-align: right;">
+                    <label for="state">State</label><br>
+                </div>
+                <div class="col">
+                    <input type="text" id="state" oninput="register()"><br>
+                </div>
+                <div class="col">
+                    <p style= "color: red;" id="erstate">POOR</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col" style="text-align: right;width: 10px;">
+                    <label for="country">Country</label><br>
+                </div>
+                <div class="col ms-3">
+                    <select name="country" id="country" style="width: 500px;" oninput="register()">
+                        <option value="declare">Choose...</option>
+                        <option value="AF">Afghanistan</option>
+                        <option value="AL">Albania</option>
+                        <option value="DZ">Algeria</option>
+                        <option value="AR">Argentina</option>
+                        <option value="AU">Australia</option>
+                        <option value="AT">Austria</option>
+                        <option value="BD">Bangladesh</option>
+                        <option value="BE">Belgium</option>
+                        <option value="BR">Brazil</option>
+                        <option value="CA">Canada</option>
+                        <option value="CN">China</option>
+                        <option value="EG">Egypt</option>
+                        <option value="FR">France</option>
+                        <option value="DE">Germany</option>
+                        <option value="IN">India</option>
+                        <option value="JP">Japan</option>
+                        <option value="MX">Mexico</option>
+                        <option value="RU">Russia</option>
+                        <option value="ZA">South Africa</option>
+                        <option value="GB">United Kingdom</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <p style= "color: red;" id="ercountry">POOR</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3" style="text-align: center;padding-right: 10px;">
+                    <label for="lang">Language known</label><br>
+                </div>
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="col-auto">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="eng" value="english">
+                                <label class="form-check-label" for="eng">English</label>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="kan" value="kannada">
+                                <label class="form-check-label" for="kan">Kannada</label>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="hindi" value="hindi">
+                                <label class="form-check-label" for="hindi">Hindi</label>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="tel" value="telugu">
+                                <label class="form-check-label" for="tel">Telugu</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-3 ms-3">
+                <div class="col" style="text-align: left;">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="declare" value="declared">
+                        <label class="form-check-label" for="gender">Hereby I declare all given details are true</label>        
+                    </div>
+                </div>
+            </div>
+            <div class="row w-75 ms-5">
+                <div class="col" style="text-align: right;">
+                    <p>Log in to <span><a href="#">Ethnus</a></span> website</p>
+                </div>
+            </div>
+            <button type="button" class="btn btn-danger" style="border-radius: 50px;width: 100px;">Register</button>
+        </div>
+    </body>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            background: linear-gradient(to top, #c0a0ff, 	#c7869a, #fde282);
+        }
+        #mainClass{
+            text-align: center;
+            width: 880px;
+        }
+        input{
+            margin-left: 20px;
+            width: 500px;
+            height: 20px;
+        }
+        p{
+            margin-bottom: 0px;
+        }
+        .row{
+            padding-bottom: 10px;
+        }
+    </style>
+    <script>
+        function register(){
+            var fname = document.getElementById("fname").value;
+            var lname = document.getElementById("lname").value;
+            var email = document.getElementById("email").value;
+            var passwd = document.getElementById("passwd").value;
+            var repass = document.getElementById("repass").value;
+            var genM = document.getElementById("genM");
+            var genF = document.getElementById("genF");
+            var age = document.getElementById("age").value;
+            var phone = document.getElementById("phone").value;
+            var address = document.getElementById("address").value;
+            var state = document.getElementById("state").value;
+            var country = document.getElementById("country").value;
+            var eng = document.getElementById("eng");
+            var kan = document.getElementById("kan");
+            var hindi = document.getElementById("hindi");
+            var tel = document.getElementById("tel");
+            var declare = document.getElementById("declare");
+            if(passwd != ""){
+                document.getElementById("erpass").innerHTML = `<p></p>`
+            }
+            else{
+                document.getElementById("erpass").innerHTML = `<p style= "color: red;">POOR</p>`
+            }
+            if(repass != passwd || repass===""){
+                document.getElementById("errepass").innerHTML = `<p style= "color: red;">POOR OR MISMATCH</p>`
+            }
+            else{
+                document.getElementById("errepass").innerHTML = `<p></p>`
+            }
+            if(fname != ""){
+                document.getElementById("erfname").innerHTML = `<p></p>`
+            }
+            else{document.getElementById("erfname").innerHTML = `<p style= "color: red;">POOR</p>`}
+            if(lname != ""){
+                document.getElementById("erlname").innerHTML = `<p></p>`
+            }
+            else{ document.getElementById("erlname").innerHTML = `<p style= "color: red;">POOR</p>`}
+            if(email != ""){
+                document.getElementById("eremail").innerHTML = `<p></p>`
+            }
+            else{document.getElementById("eremail").innerHTML = `<p style= "color: red;">POOR</p>`}
+            if(age != ""){
+                document.getElementById("erage").innerHTML = `<p></p>`
+            }
+            else{document.getElementById("erage").innerHTML = `<p style= "color: red;">POOR</p>`}
+            if(phone != ""){
+                document.getElementById("erphone").innerHTML = `<p></p>`
+            }
+            else{document.getElementById("erphone").innerHTML = `<p style= "color: red;">POOR</p>`}
+            if(address != ""){
+                document.getElementById("eradd").innerHTML = `<p></p>`
+            }
+            else{document.getElementById("eradd").innerHTML = `<p style= "color: red;">POOR</p>`}
+            if(state != ""){
+                document.getElementById("erstate").innerHTML = `<p></p>`
+            }
+            else{document.getElementById("erstate").innerHTML = `<p style= "color: red;">POOR</p>`}
+            if(country != "declare"){
+                document.getElementById("ercountry").innerHTML = `<p></p>`
+            }
+            else{document.getElementById("ercountry").innerHTML = `<p style= "color: red;">POOR</p>`}
+        }
+    </script>
+</html>
